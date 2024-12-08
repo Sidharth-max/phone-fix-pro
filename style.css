@@ -492,7 +492,7 @@ footer {
 }
 .cta-button:hover {
     background-color: #2980b9;
-    color: white;
+    color: white;}
 .cta-button-service {
     padding: 12px 15px;
     background-color: #3498db;
@@ -508,7 +508,7 @@ footer {
 .cta-button-service:hover {
     background-color: #2980b9;
     color: white;
-
+}
 .cta-button.secondary {
     background-color: transparent;
     border: 2px solid white;
