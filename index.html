@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-</head>
+    </head>
 <body>
     <header id="home">
         <nav>
@@ -357,7 +357,7 @@ $(document).ready(function() {
             Counter: number
         }, {
             duration: 2000,
-            easing: 'easeOutBounce',
+            easing: 'easeOutElastic',
             step: function(now) {
                 $this.text(Math.ceil(now) + symbol);
             }
