@@ -350,7 +350,7 @@
 $(document).ready(function() {
     $('.number').each(function() {
         var $this = $(this);
-        var symbol = $this.text().replace(''/[0-9]/g, );
+        var symbol = $this.text().replace('',/[0-9]/g );
         var number = $this.text().replace('',/[^0-9]/g);
         $this.prop('Counter', 0).animate({
             Counter: number
