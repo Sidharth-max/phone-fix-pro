@@ -351,15 +351,15 @@
 $(document).ready(function() {
     $('.number').each(function() {
         var $this = $(this);
-        var symbol = $this.text().replace(/[0-9]/g, '');
-        var number = $this.text().replace(/[^0-9]/g, '');
+        var symbol = $this.text().replace(/[0-9.]/g, '');
+        var number = $this.text().replace(/[^0-9.]/g, '');
         $this.prop('Counter', 0).animate({
             Counter: number
         }, {
             duration: 2000,
             easing: 'swing',
             step: function(now) {
-                $this.text(Math.ceil(now) + symbol);
+                $this.text(now.toFixed(1) + symbol);
             }
         });
     });
