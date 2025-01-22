@@ -13,12 +13,7 @@
     <header id="home">
         <nav>
             <div class="logo">PhoneFix Pro</div>
-            <div class="mobile-menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#why-us">Why Us</a></li>
@@ -27,6 +22,15 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="menu-button" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+
+            </button>
         </nav>
         <div class="hero">
             <h1>Expert Phone Repair Services</h1>
@@ -370,34 +374,16 @@ $(document).ready(function() {
         });
     });
 });
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('nav ul');
-    const navLinks = document.querySelectorAll('nav ul li a');
 
-    // Toggle mobile menu
-    mobileMenuToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.querySelector('.menu-button');
+        const navLinks = document.querySelector('.nav-links');
 
-    // Close mobile menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
+        menuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
         });
     });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('nav') && navMenu.classList.contains('active')) {
-            mobileMenuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
-});
-</script>
 </script>
 </html>
